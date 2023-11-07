@@ -1,6 +1,9 @@
 # Multi_Core_Fault_Tolerant_FPGA
+
 **Soft_core CPU**: [MicroBlaze](https://www.xilinx.com/products/design-tools/microblaze.html)
+
 **FPGA Board**: [Nexys-A7-50T](https://www.xilinx.com/support/university/xup-boards/DigilentNexysA7.html)
+
 **Vivado Version**: 2022.2
 
 ---
