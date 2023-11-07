@@ -1,4 +1,4 @@
-# [Multi_Core_Fault_Tolerant_FPGA](www.brennan.gg)
+# [Multi_Core_Fault_Tolerant_FPGA](https://www.brennan.gg/)
 
 **Soft_core CPU**: [MicroBlaze](https://www.xilinx.com/products/design-tools/microblaze.html)  
 **FPGA Board**: [Nexys-A7-50T](https://www.xilinx.com/support/university/xup-boards/DigilentNexysA7.html)  
