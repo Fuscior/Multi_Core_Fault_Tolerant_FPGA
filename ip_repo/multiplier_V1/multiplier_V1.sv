@@ -1,4 +1,4 @@
-module adder_32bit(
+module multiplier_V2(
     input clk,
     input [15:0] a,
     input [15:0] b,
