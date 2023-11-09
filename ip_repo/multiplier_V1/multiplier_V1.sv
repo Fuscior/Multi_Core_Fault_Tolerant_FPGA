@@ -1,4 +1,4 @@
-module multiplier_V2(
+module multiplier_V1(
     input clk,
     input [15:0] a,
     input [15:0] b,
