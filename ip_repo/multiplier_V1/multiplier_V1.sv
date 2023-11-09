@@ -8,6 +8,8 @@ module multiplier_V1(
 reg [31:0] productReg;
 assign product = productReg;
 
-always @(posedge clk) begin
-    productReg <= a * b;
-end
+always @(posedge clk) 
+    begin
+        productReg <= a * b;
+    end
+endmodule
