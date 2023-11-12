@@ -27,7 +27,7 @@ The usage of terrestrial processors in harsh environments, such as space is not 
 | LUTRAM | 4% | 
 | LUT | 11% |
 
-| First Header  | Second Header |
+| device  | percentage % |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
