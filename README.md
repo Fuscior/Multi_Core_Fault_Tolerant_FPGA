@@ -17,8 +17,8 @@ The usage of terrestrial processors in harsh environments, such as space is not 
 4. Fault injection to be designed tested and implemented in simulation and hardware.
 5. A custom testbench developed to evaluate performance and fault-tolerance.
 
-# FPGA utilization, LUTS:
-|  **device** | **percentage %** |
+# FPGA utilization, LUTS:  
+|  device | percentage % |
 |MMCM | 20% | 
 | BUFG | 13% |
 | I/O | 2% |
