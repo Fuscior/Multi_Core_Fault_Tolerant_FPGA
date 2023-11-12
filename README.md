@@ -19,7 +19,9 @@ The usage of terrestrial processors in harsh environments, such as space is not 
 
 # FPGA utilization, LUTS:  
 
-Currnt build 3core uart no DWC & TMR custom IP
+Current build 3core uart no DWC & TMR custom IP
+12/11/2023
+
 | device  | percentage % |
 | ------------- | :-------------: |
 | `MMCM`  | 20%  |
