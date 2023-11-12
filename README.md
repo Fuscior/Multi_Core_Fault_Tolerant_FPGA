@@ -20,7 +20,7 @@ The usage of terrestrial processors in harsh environments, such as space is not 
 # FPGA utilization, LUTS:  
 
 | device  | percentage % |
-| ------------- | ------------- |
+| ------------- | :-------------: |
 | `MMCM`  | 20%  |
 | `BUFG`  | 13%  |
 | `I/O`  | 2%  |
