@@ -18,4 +18,11 @@ The usage of terrestrial processors in harsh environments, such as space is not 
 5. A custom testbench developed to evaluate performance and fault-tolerance.
 
 # FPGA utilization, LUTS:
-- TBD
+|  **device** | **percentage %** |
+|MMCM | 20% | 
+| BUFG | 13% |
+| I/O | 2% |
+| BRAM | 64% | 
+| FF | 5% | 
+| LUTRAM | 4% | 
+| LUT | 11% |
