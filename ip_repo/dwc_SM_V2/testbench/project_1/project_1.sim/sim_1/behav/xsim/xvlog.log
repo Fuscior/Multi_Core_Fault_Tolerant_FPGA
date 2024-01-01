@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/brenn/OneDrive/Desktop/Carlow/4thYear/Design_Project/2_0/dwc_SM_V2/testbench/dwc_SM.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dwc_SM
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/brenn/OneDrive/Desktop/Carlow/4thYear/Design_Project/2_0/dwc_SM_V2/testbench/dwc_SM_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dwc_SM_tb
