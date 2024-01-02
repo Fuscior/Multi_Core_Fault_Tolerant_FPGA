@@ -1,4 +1,5 @@
 //MicroBlaze_1
+
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
@@ -6,27 +7,37 @@
 #include "xbasic_types.h"
 
 
-//Base Address of the RTL_MULTIPLIER
-Xuint32 *baseaddr_p = (Xuint32 *) XPAR_DWC_V1_1_0_S00_AXI_BASEADDR;
+//Base Address of the dwc_V2
+Xuint32 *baseaddr_p = (Xuint32 *) XPAR_MYDWC_V2_0_S00_AXI_BASEADDR;
+
+volatile unsigned int *setReg = (unsigned int *)XPAR_MYDWC_V2_0_S00_AXI_BASEADDR;	//set register
 
 int main()
 {
     init_platform();
 
-    for(int i=0; i<9999999; i++){}
+    //print("===================================================\n\r");
+    //print("MicoBlaze_1\n\r");
+    //print("===================================================\n\r");
 
-    print("===================================================\n\r");
-    print("MicoBlaze_1\n\r");
-
-	xil_printf("bass address is: 0x%08x \n\r", (Xuint32 *) XPAR_DWC_V1_1_0_S00_AXI_BASEADDR);
-	xil_printf("Performing a test of the DWC... \n\r");
-	// Write dwc reg 1
-	*(baseaddr_p + 1) = 0x00000003;
-
-
-	print("===================================================\n\r");
+	*(baseaddr_p + 2) = 0x00000005;
+	setBit(setReg, 1);
 
 
     cleanup_platform();
     return 0;
 }
+//--------------------------------------------------------------------------------------
+//-----set register---------------------------------------------------------------------
+ void setBit(unsigned int *setReg, int bitNumber){
+	// Read the current value
+	unsigned int value = *setReg;
+
+	// Set the desired bit
+	value |= (1 << bitNumber);
+
+	// Write the updated value back
+	*setReg = value;
+ }
+ //-----end set register-----------------------------------------------------------------
+ //--------------------------------------------------------------------------------------
