@@ -16,51 +16,11 @@ dwc_SM U1(.*);
 
 initial 
     begin
-        repeat(5) @(negedge clk)
-        reset='0;  
-        data_a='0;
-        data_b='0;
-        
+        repeat(2) @(negedge clk)
         @(negedge clk)
-        reset='1;
+        data_a=5;
         @(negedge clk)
-        reset='0;
-        
-        @(negedge clk)//no match
-        data_a='1;
-        data_set=1;
-        @(negedge clk)
-        data_b='0;
-        data_set=3;        
-        @(negedge clk)
-        reset='1;
-        @(negedge clk)
-        reset='0;
-        data_set='0;  
-
-        @(negedge clk)
-        data_a='0;
-        data_b='1;
-        
-        @(negedge clk)
-        reset='1;
-        @(negedge clk)
-        reset='0;
-        
-        @(negedge clk)
-        data_set=3;
-        @(negedge clk)
-        data_set=0;
-        
-        @(negedge clk)
-        data_a=2;
-        data_b=2;
-        
-        @(negedge clk)
-        reset='1;
-        @(negedge clk)
-        reset='0;
-        
+        data_b=5;
         @(negedge clk)
         data_set=3;
        
@@ -69,6 +29,12 @@ initial
         @(negedge clk)
         @(negedge clk)
         @(negedge clk)
+        @(negedge clk)
+        @(negedge clk)
+        @(negedge clk)
+        @(negedge clk)
+        @(negedge clk)
+
         $finish;
     end
 

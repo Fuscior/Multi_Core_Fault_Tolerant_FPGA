@@ -2,6 +2,6 @@
 2020.2
 Oct 14 2022
 05:20:55
-C:/Users/brenn/OneDrive/Desktop/Carlow/4thYear/Design_Project/2_0/dwc_SM_V2/testbench/dwc_SM.sv,1704119714,systemVerilog,,C:/Users/brenn/OneDrive/Desktop/Carlow/4thYear/Design_Project/2_0/dwc_SM_V2/testbench/dwc_SM_tb.sv,,dwc_SM,,uvm,,,,,,
-C:/Users/brenn/OneDrive/Desktop/Carlow/4thYear/Design_Project/2_0/dwc_SM_V2/testbench/dwc_SM_tb.sv,1704120122,systemVerilog,,,,dwc_SM_tb,,uvm,,,,,,
-C:/Users/brenn/OneDrive/Desktop/Carlow/4thYear/Design_Project/2_0/dwc_SM_V2/testbench/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/brenn/OneDrive/Desktop/Git_workspace/Multi_Core_Fault_Tolerant_FPGA/ip_repo/dwc_SM_V2/testbench/dwc_SM.sv,1704125618,systemVerilog,,C:/Users/brenn/OneDrive/Desktop/Git_workspace/Multi_Core_Fault_Tolerant_FPGA/ip_repo/dwc_SM_V2/testbench/dwc_SM_tb.sv,,dwc_SM,,uvm,,,,,,
+C:/Users/brenn/OneDrive/Desktop/Git_workspace/Multi_Core_Fault_Tolerant_FPGA/ip_repo/dwc_SM_V2/testbench/dwc_SM_tb.sv,1704230709,systemVerilog,,,,dwc_SM_tb,,uvm,,,,,,
+C:/Users/brenn/OneDrive/Desktop/Git_workspace/Multi_Core_Fault_Tolerant_FPGA/ip_repo/dwc_SM_V2/testbench/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1704125618,verilog,,,,glbl,,uvm,,,,,,

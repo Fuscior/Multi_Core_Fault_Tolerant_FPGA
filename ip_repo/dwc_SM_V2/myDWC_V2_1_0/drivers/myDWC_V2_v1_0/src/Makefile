@@ -1,0 +1,26 @@
+COMPILER=
+ARCHIVER=
+CP=cp
+COMPILER_FLAGS=
+EXTRA_COMPILER_FLAGS=
+LIB=libxil.a
+
+RELEASEDIR=../../../lib
+INCLUDEDIR=../../../include
+INCLUDES=-I./. -I${INCLUDEDIR}
+
+INCLUDEFILES=myDWC_V2.h
+LIBSOURCES=myDWC_V2.c myDWC_V2_selftest.c
+OUTS = myDWC_V2.o myDWC_V2_selftest.o
+
+libs:
+	echo "Compiling myDWC_V2..."
+	$(COMPILER) $(COMPILER_FLAGS) $(EXTRA_COMPILER_FLAGS) $(INCLUDES) $(LIBSOURCES)
+	$(ARCHIVER) -r ${RELEASEDIR}/${LIB} ${OUTS}
+	make clean
+
+include:
+	${CP} $(INCLUDEFILES) $(INCLUDEDIR)
+
+clean:
+	rm -rf ${OUTS}
