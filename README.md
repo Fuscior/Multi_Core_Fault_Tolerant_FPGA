@@ -24,13 +24,13 @@ The usage of terrestrial processors in harsh environments, such as space is not 
 
 |       device  |         2Core % |      3Core % |     DWC IP % |     TMR IP % | `DWC system %` | `TMR system %` |
 | ------------- | :-------------: |------------- |------------- |------------- |------------- |------------- |
-| `MMCM`  |                  20%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
-| `BUFG`  |                  13%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
-| `I/O`  |                    2%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
-| `BRAM`  |                  43%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
-| `FF`  |                     3%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
-| `LUTRAM`  |                 3%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
-| `LUT`  |                    8%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
+| `MMCM`  |                  20%  |         20%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
+| `BUFG`  |                  13%  |         13%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
+| `I/O`  |                    2%  |          2%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
+| `BRAM`  |                  43%  |         64%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
+| `FF`  |                     3%  |          5%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
+| `LUTRAM`  |                 3%  |          4%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
+| `LUT`  |                    8%  |         11%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
 
 # System flowchart
 placeholder  
