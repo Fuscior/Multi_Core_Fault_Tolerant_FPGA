@@ -27,10 +27,10 @@ The usage of terrestrial processors in harsh environments, such as space is not 
 | `MMCM`  |                  20%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
 | `BUFG`  |                  13%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
 | `I/O`  |                    2%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
-| `BRAM`  |                  64%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
-| `FF`  |                     5%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
-| `LUTRAM`  |                 4%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
-| `LUT`  |                   11%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
+| `BRAM`  |                  43%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
+| `FF`  |                     3%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
+| `LUTRAM`  |                 3%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
+| `LUT`  |                    8%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
 
 # System flowchart
 placeholder  
