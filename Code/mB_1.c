@@ -1,6 +1,6 @@
-//MicroBlaze_1
 
 #include <stdio.h>
+#include <stdbool.h>
 #include "platform.h"
 #include "xil_printf.h"
 #include "xparameters.h"
@@ -8,41 +8,74 @@
 #include "xil_exception.h"	//isr
 
 //Base Address of the dwc_V2
-Xuint32 *baseaddr_p = (Xuint32 *) XPAR_DWC1_0_S00_AXI_BASEADDR;
+Xuint32 *baseaddr_p = (Xuint32 *) XPAR_DWC_V3_05_0_S00_AXI_BASEADDR;
+volatile unsigned int *setReg = (unsigned int *)XPAR_DWC_V3_05_0_S00_AXI_BASEADDR;	//set register
 
-volatile unsigned int *setReg = (unsigned int *)XPAR_DWC1_0_S00_AXI_BASEADDR;
-
+void debug_print(void);
 void enable_ISR(void);
 void myIsr(void *CallbackRef);
 
+bool hold_flag=TRUE;
+bool waite_flag=TRUE;
+
+int arrayB[11]={1, 0, 3 , 0 ,5 ,0, 7,  0, 9 ,0};
+
 int main()
 {
+
     init_platform();
+    enable_ISR();
 
 
-	*(baseaddr_p + 2) = 0x00000004;
-	setBit(setReg, 1);
+    for(int i=0; i<11; i++){
+        hold_flag=TRUE;
+
+        *(baseaddr_p + 2)=arrayB[i];
+        setBit(setReg, 1);
+
+        while(hold_flag){}
+
+        //*(baseaddr_p + 12)=0;
+    }
 
 
     cleanup_platform();
     return 0;
+
 }
-
 //--------------------------------------------------------------------------------------
-//-----set register---------------------------------------------------------------------
- void setBit(unsigned int *setReg, int bitNumber){
-	// Read the current value
-	unsigned int value = *setReg;
+ void myIsr(void *CallbackRef) {
 
-	// Set the desired bit
-	value |= (1 << bitNumber);
+	 if(*(baseaddr_p + 6) == 1){
+		 clearBit(setReg,1);
+	 }
 
-	// Write the updated value back
-	*setReg = value;
+	 if(*(baseaddr_p + 7)==1){
+		 *(baseaddr_p + 12)=1;
+
+		 hold_flag=FALSE;
+	 }
+
  }
- //-----end set register-----------------------------------------------------------------
  //--------------------------------------------------------------------------------------
-
+//-----debug print reg values-----------------------------------------------------------
+void debug_print(void){
+	xil_printf("start of debug print\n\n\r");
+	print("MicoBlaze_1\n\r");
+	xil_printf("Read from register 0 set reg: 0x%08x \n\r", *(baseaddr_p + 0));
+	xil_printf("Read from register 1 uP0 data: 0x%08x \n\r", *(baseaddr_p + 1));
+	xil_printf("Read from register 2 up1 data: 0x%08x \n\r", *(baseaddr_p + 2));
+	xil_printf("Read from register 3 NC: 0x%08x \n\r", *(baseaddr_p + 3));
+	xil_printf("Read from register 4 NC: 0x%08x \n\r", *(baseaddr_p + 4));
+	xil_printf("Read from register 5 isMatch: 0x%08x \n\r", *(baseaddr_p + 5));
+	xil_printf("Read from register 6 data_read: 0x%08x \n\r", *(baseaddr_p + 6));
+	xil_printf("Read from register 7 Done: 0x%08x \n\r", *(baseaddr_p + 7));
+	xil_printf("Read from register 10 start: 0x%08x \n\r", *(baseaddr_p + 10));
+	xil_printf("Read from register 11 ackA: 0x%08x \n\r", *(baseaddr_p + 11));
+	xil_printf("Read from register 12 ackB: 0x%08x \n\r", *(baseaddr_p + 12));
+	xil_printf("Read from register 14 reset: 0x%08x \n\r", *(baseaddr_p + 14));
+	xil_printf("End of debug print\n\n\r");
+}
 //--------------------------------------------------------------------------------------
 //-----enable interupt------------------------------------------------------------------
 void enable_ISR(void){
@@ -55,8 +88,25 @@ void enable_ISR(void){
 }
 //-----end enable interupt--------------------------------------------------------------
 //--------------------------------------------------------------------------------------
-void myIsr(void *CallbackRef) {
+ //-----set register---------------------------------------------------------------------
+  void setBit(unsigned int *setReg, int bitNumber){
+ 	unsigned int value = *setReg;// Read the current value
 
-    //xil_printf("Interrupt occurred!\n");
-    //xil_printf("Read from register 5 isMatch in ISR: 0x%08x \n\r", *(baseaddr_p + 3));
-}
+ 	value |= (1 << bitNumber);// Set the desired bit
+ 	*setReg = value;// Write the updated value back
+  }
+  //-----end set register-----------------------------------------------------------------
+  //--------------------------------------------------------------------------------------
+  void clearBit(unsigned int *setReg, int bitNumber) {
+      unsigned int value = *setReg;// Read the current value
+
+      // Clear the desired bit
+      value &= ~(1 << bitNumber);
+
+      // Write the updated value back
+      *setReg = value;
+  }
+
+//-----end debug print reg values-------------------------------------------------------
+//--------------------------------------------------------------------------------------
+
